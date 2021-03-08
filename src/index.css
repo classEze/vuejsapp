@@ -16,12 +16,16 @@ body{
 
 .swiper-container{
      z-index: -1;
-     @apply w-11/12 h-80 mx-auto
+     @apply  mx-auto
 }
+.slider_image{
+     height:450px;
+     @apply object-contain w-10/12 mx-auto
+     }
 .card-container{
 width: 350px;
 height: 360px;
-     @apply  flex flex-col mx-auto  items-center border-2 shadow-md rounded-md
+     @apply  flex flex-col mx-auto border-2 shadow-md rounded-md
 }
 input{
      border: none;
@@ -29,6 +33,10 @@ input{
 }
 .footer{
      background: green ;
-     @apply w-full text-white h-20 flex items-center justify-center shadow-lg px-4
+     @apply w-full text-white text-xl h-16 flex items-center justify-center shadow-lg px-4
 
+}
+.search_bar{
+     border: 0.5px solid rgba(0,0,0,0.2);
+     @apply font-bold flex px-4 items-center h-12 rounded-3xl w-5/6 ml-20 mt-6
 }

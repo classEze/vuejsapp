@@ -1,13 +1,19 @@
 <template>
 <div class="footer">
-      Footer 
+      &copy; 9PayMerchant, {{today}}
 </div>
   
 </template>
 
 <script>
 export default {
-     name:"Footer"
+     name:"Footer", 
+
+     data(){
+           return{
+            today:new Date().getUTCFullYear()
+           }
+     }
 
 }
 </script>

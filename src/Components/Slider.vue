@@ -1,20 +1,19 @@
 <template>
   <section class="mt-24">
      <Swiper
-    :slides-per-view="3"
+    :slides-per-view="1"
     :space-between="20 "
     pagination
     autoplay
-    centeredSlide
     >
-<SwiperSlide> 
-     <img src="/image1.png" class="w-11/12 mx-auto object-fill" alt="image">
+<SwiperSlide class="relative"> 
+     <img src="/image1.png" class=" slider_image " alt="image">
 </SwiperSlide>>
-<SwiperSlide> 
-     <img src="/image2.png" class="w-11/12 h-11/12 mx-auto object-fill" alt="image">
+<SwiperSlide class="relative"> 
+     <img src="/image2.png" class=" slider_image " alt="image">
 </SwiperSlide>
-<SwiperSlide> 
-     <img src="/image3.png" class="w-11/12 h-11/12 mx-auto object-fill" alt="image">
+<SwiperSlide class="relative"> 
+     <img src="/image3.png" class=" slider_image " alt="image">
 </SwiperSlide>>
      </Swiper>   
  </section>
@@ -34,6 +33,4 @@ export default {
 }
 </script>
 <style >
-
-
 </style>

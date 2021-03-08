@@ -1,6 +1,6 @@
 <template>
-  <section class='flex items-center h-16 rounded-lg w-5/6 mx-auto border-4 '>
-     <div> SerchIcon </div>
+  <section class='search_bar'>
+     <div> SearchIcon </div>
        <input type="text" placeholder="Search for a product"  v-model="term" @input="search_Function" class="flex-1 border-none">
   </section>
 </template>

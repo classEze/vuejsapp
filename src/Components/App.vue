@@ -1,10 +1,10 @@
 <template>
   <Header />
-  <Slider/>
+  <Slider />
   <SearchBar @search="Search" :products="productsArray" :rendered="renderedProducts" />
+   <Filter @filter="filter_Items" />
   <Merchants :products="renderedProducts" />
   <Footer />
-
 </template>
 
 <script>
@@ -13,6 +13,7 @@ import Footer from './Footer'
 import Slider from './Slider'
 import Merchants from './Merchants'
 import SearchBar from './SearchBar'
+import Filter from './Filter.vue'
 
 export default {
   name: 'App',
@@ -21,29 +22,34 @@ export default {
     Footer,
     Slider,
     Merchants,
-    SearchBar
+    SearchBar,
+    Filter
   },
        data(){
           return {
                productsArray : [],
+               renderedProducts: []
           }
      },
  created () {
           fetch("https://fakestoreapi.com/products")
           .then(res=>res.json())
-          .then(data=> this.productsArray = data)
+          .then(data=>{
+            this.productsArray = data
+           this.renderedProducts = data
+          })
           .catch(err=> console.log(err))
-     },
-     computed : {
-       renderedProducts() {
-        return this.productsArray
-       }
      },
      methods: {
        Search(term){
          console.log(term)
-        this.renderedProducts = this.productsArray.filter( product => product.title.indexOf(term) !== -1 )
+        this.renderedProducts = this.productsArray.filter( product => product.title.toLowerCase().indexOf(term.toLowerCase()) !== -1 )
         
+       },
+       filter_Items(category) {
+        if(category == "All") return this.renderedProducts = this.productsArray
+       this.renderedProducts = this.productsArray.filter( product => product.category === category )
+
        }
      }
 

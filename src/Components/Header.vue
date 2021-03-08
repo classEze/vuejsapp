@@ -1,8 +1,6 @@
 <template>
 <div class="header">
-      9Pay 
-</div>
-  
+<img src="/logo.png" class="h-5/6 w-auto object-contain" alt=""></div>  
 </template>
 
 <script>
