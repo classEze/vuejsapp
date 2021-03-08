@@ -41,6 +41,7 @@ export default {
      },
      methods: {
        Search(term){
+         console.log(term)
         this.renderedProducts = this.productsArray.filter( product => product.title.indexOf(term) !== -1 )
         
        }

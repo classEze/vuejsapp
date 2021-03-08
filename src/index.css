@@ -27,3 +27,8 @@ input{
      border: none;
      outline: unset;
 }
+.footer{
+     background: green ;
+     @apply w-full text-white h-20 flex items-center justify-center shadow-lg px-4
+
+}
