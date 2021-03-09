@@ -7,6 +7,7 @@ body{
      margin: 0;
      min-height: 100%;
      overflow-x: hidden;
+     max-width: 100%;
 
 }
 .header {
@@ -19,12 +20,13 @@ body{
      @apply  mx-auto
 }
 .slider_image{
-     height:450px;
+     height:400px;
      @apply object-contain w-10/12 mx-auto
      }
 .card-container{
 width: 350px;
 height: 360px;
+max-width: 95%;
      @apply  flex flex-col mx-auto border-2 shadow-md rounded-md
 }
 input{
