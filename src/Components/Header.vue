@@ -1,11 +1,18 @@
 <template>
 <div class="header">
-<img src="/logo.png" class="h-5/6 w-auto object-contain" alt=""></div>  
+<img src="/logo.png" class="h-5/6 w-auto object-contain" alt="">
+ <GiHamburgerMenu class='text-3xl text-white' />
+</div>  
 </template>
 
-<script>
+<script>    
+import { GiHamburgerMenu } from 'oh-vue-icons/icons'
 export default {
-     name:"Header"
+     name:"Header",
+     components: {
+    GiHamburgerMenu
+}
+
 
 }
 </script>
